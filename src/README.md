@@ -6,38 +6,24 @@
 
 ## Installation
 
-1. Clone repo:
+1. Clone the repository:
    ```bash
-   git clone https://your-repo-url.git
-   cd your-repo
+   git clone https://github.com/yourname/fastapi-mysql-api.git
+   cd fastapi-mysql-api
    ```
 
-2. Create a .env file in the root folder:
-   ```ini
-   DB_HOST=localhost
-   DB_PORT=3306
-   DB_NAME=db_name
-   DB_USER=user
-   DB_PASSWORD=password
-   JWT_SECRET_KEY=secretkey
-   ```
-
-3. Install dependencies (or do it in venv):
-   ```bash
+2. Install dependencies
    pip install -r requirements.txt
-   ```
-  
-4. Run database migrations:
-   ```bash
-   python db/migrate.py
-   ```
-  
-5. Seed the database with initial data:
-   ```bash
-   python db/seed.py
-   ```
+   pip install fastapi uvicorn sqlalchemy pymysql
 
-6. Start the development server:
-   ```bash
-   python app.py
-   ```
+3. Configure the database
+   Open database.py and update your MySQL connection string:
+   DATABASE_URL = "mysql+pymysql://username:password@localhost:3306/dbname"
+
+   Make sure the database dbname exists. If not, create it using MySQL:
+   CREATE DATABASE dbname;
+
+4. Run the API server
+   uvicorn main:app --reload
+   Once the server is running, you can access:
+   http://127.0.0.1:8000/docs
