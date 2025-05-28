@@ -7,10 +7,9 @@
 ## Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourname/fastapi-mysql-api.git
-   cd fastapi-mysql-api
-   ```
+   git clone https://github.com/zamkovijvitalik/lab6.git
+   cd lab6
+
 
 2. Install dependencies
    pip install -r requirements.txt
@@ -18,10 +17,10 @@
 
 3. Configure the database
    Open database.py and update your MySQL connection string:
-   DATABASE_URL = "mysql+pymysql://username:password@localhost:3306/dbname"
+   DATABASE_URL = "mysql+pymysql://root@localhost:3306/neutaa"
 
-   Make sure the database dbname exists. If not, create it using MySQL:
-   CREATE DATABASE dbname;
+   Make sure the database neutaa exists. If not, create it using MySQL:
+   CREATE DATABASE neutaa;
 
 4. Run the API server
    uvicorn main:app --reload
